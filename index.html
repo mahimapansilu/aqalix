@@ -16,7 +16,7 @@
             <div id="loader-log"></div>
             <div class="loader-status">
                 <span class="matrix-text">ACCESSING AQALIX NODES...</span>
-                <p style="font-size: 0.7rem; color: #555;">Hint: Try typing 'system_status' in the terminal later.</p>
+                <p style="font-size: 0.7rem; color: #555; margin-top: 5px;">Hint: Type 'help' in the terminal later.</p>
                 <div class="progress-bar-container"><div id="progress-fill"></div></div>
             </div>
         </div>
@@ -27,7 +27,7 @@
     <nav class="navbar glass-nav">
         <div class="logo">AQALIX_V4</div>
         <div class="nav-links">
-            <button class="nav-btn" data-target="home">Home</button>
+            <button class="nav-btn active" data-target="home">Home</button>
             <button class="nav-btn" data-target="work">Work</button>
             <button class="nav-btn" data-target="team">Team</button>
             <button class="nav-btn" data-target="testimonials">Reviews</button>
@@ -39,19 +39,23 @@
         
         <section id="home" class="snap-section">
             <div class="glass-panel hero-content">
-                <div class="core-container">
-                    <div class="cube">
-                        <div class="face front"></div>
-                        <div class="face back"></div>
-                        <div class="face right"></div>
-                        <div class="face left"></div>
-                        <div class="face top"></div>
-                        <div class="face bottom"></div>
+                <div class="core-container" id="main-cube-container">
+                    <div class="cube" id="main-cube">
+                        <div class="face front"></div><div class="face back"></div>
+                        <div class="face right"></div><div class="face left"></div>
+                        <div class="face top"></div><div class="face bottom"></div>
                     </div>
                 </div>
-                <div class="badge">HINTS HIDDEN IN THE LOGS</div>
-                <h1 class="gradient-text">Beyond Digital Limits</h1>
-                <p>Welcome to Aqalix. Explore our modules below. <br> <strong>Search for hidden commands to unlock system secrets via the CMD terminal.</strong></p>
+                <div class="badge animate-flicker">SYSTEM: STABLE // ENCRYPTION: ACTIVE</div>
+                <h1 class="gradient-text" id="main-title">Beyond Digital Limits</h1>
+                
+                <div class="hero-stats">
+                    <div class="stat-item"><span>99%</span><p>Uptime</p></div>
+                    <div class="stat-item"><span>100+</span><p>Projects</p></div>
+                    <div class="stat-item"><span>24/7</span><p>Monitoring</p></div>
+                </div>
+
+                <p class="hero-desc">Welcome to Aqalix. Explore our modules below. <br> Search for hidden commands to unlock system secrets via the CMD terminal.</p>
                 <button class="cyber-btn" onclick="scrollToSection('contact')">HIRE THE SQUAD</button>
             </div>
         </section>
@@ -75,7 +79,7 @@
                     <div class="glass-card">
                         <i class="fas fa-user-shield icon-big"></i>
                         <h3>Vulnerability Checking</h3>
-                        <p>Deep security audits and penetration testing for systems.</p>
+                        <p>Deep security audits and testing. <b>(Hint: unlock_core)</b></p>
                         <span class="tech-tag">CyberSec / Audit</span>
                     </div>
                 </div>
@@ -87,7 +91,7 @@
                 <h2 class="section-title">System <span class="text-glow">Administrators</span></h2>
                 <div class="feature-grid">
                     <div class="glass-card team-card">
-                        <div class="pfp">M</div>
+                        <div class="pfp">MP</div>
                         <h3>Mahima Pansilu</h3>
                         <p>Lead Developer</p>
                         <div class="social-links">
@@ -97,7 +101,7 @@
                         </div>
                     </div>
                     <div class="glass-card team-card">
-                        <div class="pfp">S</div>
+                        <div class="pfp">SN</div>
                         <h3>Sithara Nimara</h3>
                         <p>UI/UX Designer</p>
                         <div class="social-links">
@@ -107,7 +111,7 @@
                         </div>
                     </div>
                     <div class="glass-card team-card">
-                        <div class="pfp">K</div>
+                        <div class="pfp">KU</div>
                         <h3>Kasee Udampath</h3>
                         <p>Security Specialist</p>
                         <div class="social-links">
@@ -139,6 +143,7 @@
         <section id="contact" class="snap-section">
             <div class="glass-panel">
                 <h2 class="section-title">Terminal <span class="text-glow">Uplink</span></h2>
+                
                 <div class="desktop-only">
                     <div class="interactive-terminal" id="term-container">
                         <div class="terminal-header">
@@ -161,6 +166,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="mobile-only">
                     <form class="glass-form" id="mobile-web3-form">
                         <div class="input-group"><input type="text" name="name" required><label>Name</label></div>
@@ -169,6 +175,7 @@
                         <button type="submit" class="cyber-btn w-100">SEND PACKET</button>
                     </form>
                 </div>
+
             </div>
         </section>
     </main>
