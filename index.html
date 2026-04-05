@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqalix - Digital Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="page-loader">
+        <canvas id="warp-canvas"></canvas>
+        <div class="loader-content">
+            <div id="loader-log"></div>
+            <div class="loader-status">
+                <span class="matrix-text">ACCESSING AQALIX NODES...</span>
+                <p style="font-size: 0.7rem; color: #555;">Hint: Try typing 'system_status' in the terminal later.</p>
+                <div class="progress-bar-container"><div id="progress-fill"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="matrix-bg"></canvas>
+
+    <nav class="navbar glass-nav">
+        <div class="logo">AQALIX_V4</div>
+        <div class="nav-links">
+            <button class="nav-btn" data-target="home">Home</button>
+            <button class="nav-btn" data-target="work">Work</button>
+            <button class="nav-btn" data-target="team">Team</button>
+            <button class="nav-btn" data-target="testimonials">Reviews</button>
+            <button class="nav-btn" data-target="contact">Contact</button>
+        </div>
+    </nav>
+
+    <main class="scroll-container" id="main-scroller">
+        
+        <section id="home" class="snap-section">
+            <div class="glass-panel hero-content">
+                <div class="core-container">
+                    <div class="cube">
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                        <div class="face right"></div>
+                        <div class="face left"></div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                    </div>
+                </div>
+                <div class="badge">HINTS HIDDEN IN THE LOGS</div>
+                <h1 class="gradient-text">Beyond Digital Limits</h1>
+                <p>Welcome to Aqalix. Explore our modules below. <br> <strong>Search for hidden commands to unlock system secrets via the CMD terminal.</strong></p>
+                <button class="cyber-btn" onclick="scrollToSection('contact')">HIRE THE SQUAD</button>
+            </div>
+        </section>
+
+        <section id="work" class="snap-section">
+            <div class="glass-panel">
+                <h2 class="section-title">Operational <span class="text-glow">Expertise</span></h2>
+                <div class="bento-grid">
+                    <div class="glass-card">
+                        <i class="fas fa-laptop-code icon-big"></i>
+                        <h3>Web Designing</h3>
+                        <p>High-end UI/UX with pixel-perfect responsive architectures.</p>
+                        <span class="tech-tag">React / Next.js / GSAP</span>
+                    </div>
+                    <div class="glass-card">
+                        <i class="fas fa-mobile-alt icon-big"></i>
+                        <h3>App Development</h3>
+                        <p>Cross-platform mobile apps with cloud-native backends.</p>
+                        <span class="tech-tag">Flutter / Firebase</span>
+                    </div>
+                    <div class="glass-card">
+                        <i class="fas fa-user-shield icon-big"></i>
+                        <h3>Vulnerability Checking</h3>
+                        <p>Deep security audits and penetration testing for systems.</p>
+                        <span class="tech-tag">CyberSec / Audit</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="snap-section">
+            <div class="glass-panel">
+                <h2 class="section-title">System <span class="text-glow">Administrators</span></h2>
+                <div class="feature-grid">
+                    <div class="glass-card team-card">
+                        <div class="pfp">M</div>
+                        <h3>Mahima Pansilu</h3>
+                        <p>Lead Developer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                    <div class="glass-card team-card">
+                        <div class="pfp">S</div>
+                        <h3>Sithara Nimara</h3>
+                        <p>UI/UX Designer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                    <div class="glass-card team-card">
+                        <div class="pfp">K</div>
+                        <h3>Kasee Udampath</h3>
+                        <p>Security Specialist</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="snap-section">
+            <div class="glass-panel">
+                <h2 class="section-title">Neural <span class="text-glow">Feedback</span></h2>
+                <div class="reviews-wrapper">
+                    <div class="glass-card quote-card">
+                        <p>"Aqalix built our enterprise app in record time. Professionalism at its peak."</p>
+                        <span class="client-name">- Director, Nexa Corp</span>
+                    </div>
+                    <div class="no-comments">
+                        <i class="fas fa-comment-slash"></i>
+                        <p>There are no more comments in this node.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="snap-section">
+            <div class="glass-panel">
+                <h2 class="section-title">Terminal <span class="text-glow">Uplink</span></h2>
+                <div class="desktop-only">
+                    <div class="interactive-terminal" id="term-container">
+                        <div class="terminal-header">
+                            <span>aqalix_cli_v4.exe</span>
+                            <div class="term-btns"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                        </div>
+                        <div class="terminal-inner" id="term-body">
+                            <div id="cmd-history">
+                                <div>AQALIX OPERATING SYSTEM [Version 4.0.0]</div>
+                                <div>(c) 2026 Aqalix Corporation. All rights reserved.</div>
+                                <br>
+                                <div>> Type <span style="color:var(--cyan)">'help'</span> to see available commands.</div>
+                                <br>
+                                <div id="current-q">> Input your Name:</div>
+                            </div>
+                            <div class="cmd-line">
+                                <span class="prompt">user@aqalix:~$ </span>
+                                <input type="text" id="cmd-input" autocomplete="off" autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-only">
+                    <form class="glass-form" id="mobile-web3-form">
+                        <div class="input-group"><input type="text" name="name" required><label>Name</label></div>
+                        <div class="input-group"><input type="email" name="email" required><label>Email</label></div>
+                        <div class="input-group"><textarea name="message" rows="4" required></textarea><label>Message</label></div>
+                        <button type="submit" class="cyber-btn w-100">SEND PACKET</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
